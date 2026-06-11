@@ -661,6 +661,11 @@
 </form>
 
 <script>
+    emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", {
+    to_email: "user@example.com",  // <-- The user's email address
+    from_name: "User Name",
+    message: "Hello!"
+})
   document.getElementById('contact-form').addEventListener('submit', function(e) {
     e.preventDefault();
     emailjs.sendForm('service_f8p4pv1', 'template_4gp9h0g', this)
